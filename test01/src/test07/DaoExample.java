@@ -1,7 +1,8 @@
 package test07;
 
 public class DaoExample {
-
+	//dbwork이라는 메소드를 호출할 때 매게 변수가 DataAccessObject dao라는 인터페이스로 정의 되어 있으므로
+	//OracleDao와 MySqlDao를 인터페이스 구현 클래스로 구현하되 dao.select(); ~ dao.delete(); 4개의 추상 메소드를 재정의
 	public static void dbWork(DataAccessObject dao) {
 		dao.select();
 		dao.insert();
@@ -9,8 +10,8 @@ public class DaoExample {
 		dao.delete();
 	}
 	public static void main(String[] args) {
-		dbwork(new OracleDao());
-		dbwork(new MySqlDao());
+		dbWork(new OracleDao());
+		dbWork(new MySqlDao());
 	}
 
 }
