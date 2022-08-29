@@ -1,4 +1,4 @@
-package sec06.exam05_wait_notify;
+package sec06_exam05_wait_notify;
 
 public class DataBox {
 	private String data;
@@ -10,7 +10,7 @@ public class DataBox {
 			} catch (InterruptedException e) {}
 		}
 		String returnValue = data;
-		System.out.println("ConsummerThreadê°€ ì½ì€ ë°ì´í„°: " + returnValue);
+		System.out.println("ConsummerThread°¡ ÀĞÀº µ¥ÀÌÅÍ: " + returnValue);
 		data = null;
 		notify();
 		return returnValue;
@@ -23,7 +23,7 @@ public class DataBox {
 			} catch (InterruptedException e) {}
 		}
 		this.data = data;
-		System.out.println("ProducerThreadê°€ ìƒì„±í•œ ë°ì´í„°: " + data);
+		System.out.println("ProducerThread°¡ »ı¼ºÇÑ µ¥ÀÌÅÍ: " + data);
 		notify();
 	}
 	
